@@ -1,10 +1,3 @@
-First let us configure the kubeconfig
-
-```
-cd .kube
-scp config root@node01:/tmp/
-```{{execute HOST1}}
-
 Now let us install the Flannel CNI plugin which will make all nodes ready
 
 `kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml`{{execute HOST1}}
