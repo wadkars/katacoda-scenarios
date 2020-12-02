@@ -10,7 +10,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ``` {{execute HOST1}}
 
 
-Run the join command from the master
+Run the join command from the master in the worker node 
 
 ```
 scp config root@node01:/tmp/
