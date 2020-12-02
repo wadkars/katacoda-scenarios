@@ -1,6 +1,6 @@
 {
-  "title": "Kubernetes-Full-Install-And-Running v6",
-  "description": "Multi node Kubernetes cluster configured using Kubeadm,end to end installation.6 steps",
+  "title": "Kubernetes-Full-Install-And-Running v7",
+  "description": "Multi node Kubernetes cluster configured using Kubeadm,end to end installation",
   "details": {
     "steps": [
       {
