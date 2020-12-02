@@ -2,35 +2,3 @@ With this environment the Kubernetes nodes are not configured. If you want to co
 
 `kubeadm init --kubernetes-version $(kubeadm version -o short)`{{execute HOST1}}
 
-```
-mkdir -p $HOME/.kube
-sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-sudo chown $(id -u):$(id -g) $HOME/.kube/config
-
-``` {{execute HOST1}}
-
-
-Run the join command from the master in the worker node. It should look like this
-
-kubeadm join 172.17.0.56:6443 --token <TOKEN> \
-    --discovery-token-ca-cert-hash <SHA256_HASH>
-
-```
-cd .kube
-scp config root@node01:/tmp/
-```{{execute HOST1}}
-
-```
-mkdir -p $HOME/.kube/
-mv /tmp/config $HOME/.kube/
-```{{execute HOST2}}
-
-Now install the flannel networking plugin
-`kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml`{{execute HOST1}}
-
-Run this repeatedly on the master node until you see both nodes are ready
-`kubectl get nodes`{{execute HOST1}}
-
-Now verify the result from the worker node
-`kubectl get nodes`{{execute HOST2}}
-
