@@ -1,5 +1,5 @@
 {
-  "title": "Kubernetes-Full-Install-And-Running",
+  "title": "Kubernetes-Full-Install-And-Running v2",
   "description": "Multi node Kubernetes cluster configured using Kubeadm,end to end installation",
   "details": {
     "steps": [
