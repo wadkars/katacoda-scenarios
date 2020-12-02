@@ -1,5 +1,5 @@
 {
-  "title": "Kubernetes-Full-Install-And-Running v4",
+  "title": "Kubernetes-Full-Install-And-Running v5",
   "description": "Multi node Kubernetes cluster configured using Kubeadm,end to end installation",
   "details": {
     "steps": [
@@ -10,6 +10,18 @@
       {
         "title": "Step 2",
         "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5",
+        "text": "step5.md"
       }
     ],
     "finish": {

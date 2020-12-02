@@ -28,7 +28,9 @@ mv /tmp/config $HOME/.kube/
 Now install the flannel networking plugin
 `kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml`{{execute HOST1}}
 
+Run this repeatedly on the master node until you see both nodes are ready
 `kubectl get nodes`{{execute HOST1}}
 
+Now verify the result from the worker node
 `kubectl get nodes`{{execute HOST2}}
 
