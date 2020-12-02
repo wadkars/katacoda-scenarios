@@ -12,13 +12,12 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 Run the join command from the master
 
-`kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml` {{execute HOST1}}
 
-`mkdir -p $HOME/.kube/` {{execute HOST2}}
+`mkdir -p $HOME/.kube/`{{execute HOST2}}
 
-`scp $HOME/.kube/config root@node01:/.kube/` {{execute HOST1}}
+`scp $HOME/.kube/config root@node01:/.kube/`{{execute HOST1}}
 
 Now install the flannel networking plugin
-
+`kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml`{{execute HOST1}}
 
 
